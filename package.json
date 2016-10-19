@@ -1,16 +1,21 @@
 {
-  "name": "@npm/mycli",
+  "name": "mycli",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "cli for template",
+  "main": "bin/scion",
   "bin": {
     "scion": "bin/scion"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "list": "node bin/scion list",
+    "init": "node bin/scion init"
+  },
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/alonewalked/mycli.git"
   },
   "author": "tctj",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
     "co": "^4.6.0",
