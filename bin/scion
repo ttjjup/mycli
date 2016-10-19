@@ -19,7 +19,7 @@ program
 // 1. add
 program
 	.command('add')
-	.description('List all the templates')
+	.description('Add a new template')
   .alias('a')
   .action(() => {
     require('../command/add')()
@@ -28,7 +28,7 @@ program
 // 2. list
 program
 	.command('list')
-	.description('Add a new template')
+	.description('List all the templates')
   .alias('l')
   .action(() => {
     require('../command/list')()
@@ -37,7 +37,7 @@ program
 // 3. create new project
 program
 	.command('init')
-	.description('create a new template')
+	.description('create a new project')
   .alias('i')
   .action(() => {
     require('../command/init')()
@@ -46,7 +46,7 @@ program
 // 4. delete
 program
 	.command('delete')
-	.description('delete a new template')
+	.description('delete a template')
   .alias('d')
   .action(() => {
     require('../command/delete')()
