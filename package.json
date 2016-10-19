@@ -1,5 +1,5 @@
 {
-  "name": "budingcli",
+  "name": "buildingcli",
   "version": "1.0.1",
   "description": "cli for build project",
   "main": "bin/scion",
