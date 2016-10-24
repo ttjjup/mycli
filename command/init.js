@@ -9,6 +9,8 @@ module.exports = () => {
         // wating input
         let tplName = yield prompt('Template name: ');
         let projectName = yield prompt('Project name: ');
+        let savePath = yield prompt('Project save to: ');
+        savePath = savePath || '';
         let gitUrl, branch;
 
         if(!config.tpl[tplName]) {
@@ -19,9 +21,9 @@ module.exports = () => {
         gitUrl = config.tpl[tplName].url;
         branch = config.tpl[tplName].branch;
 
-        let cmdStr = `git clone ${gitUrl} ${projectName} && 
+        let cmdPath = savePath? `cd ${savePath} && ` : '';
+        let cmdStr = `${cmdPath}git clone ${gitUrl} ${projectName} && 
         cd ${projectName} && git checkout ${branch}`;
-
         console.log(chalk.white('\n Start generating...'));
 
         exec(cmdStr, (err, stdout, stderr)=> {
@@ -33,7 +35,6 @@ module.exports = () => {
             console.log(`\n cd ${projectName} && npm install \n`);
             process.exit();
         });
-
         
     });
 };
