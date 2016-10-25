@@ -8,7 +8,8 @@
   },
   "scripts": {
     "list": "node bin/scion list",
-    "init": "node bin/scion init"
+    "init": "node bin/scion init",
+    "add": "node bin/scion add"
   },
   "repository": {
     "type":"git",
